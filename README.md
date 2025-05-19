@@ -1,11 +1,11 @@
 # Brenner Data
 
-Repo to convert original Brenner-XML files into some valid TEI/XML
+Repo to convert original Brenner-XML files into some valid TEI/XML and pubish the latter.
 
-files in
-* `brenner`
-* `brenner_wtags` are copied from
-copied from https://gitlab.oeaw.ac.at/acdh-ch/ace/der-brenner/brenner
+* copy needed files from [br_texts/BR](https://gitlab.oeaw.ac.at/acdh-ch/ace/der-brenner/brenner) into `brenner`
+* run `transform.sh` to convert files from `brenner` into TEI/XML and store new created files into `editions/{volume-id}/{orig-filename}.xml`
 
-files in `editions` are processed by running `./transform.sh`
+currently no actual data will be checked into the repo due to ongoing work on proper TEI conversion.
+
+
 
