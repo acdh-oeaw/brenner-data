@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="tei2html">
+    <property name="target" value="editions"/>
+    
+    <target name="transform">
+        <!-- Clean target directory -->
+        <delete dir="${target}"/>
+        <mkdir dir="${target}"/>
+        
+        <!-- Transform XML files -->
+        <xslt style="xsl/totei.xsl" destdir="${target}">
+            <fileset dir="brenner/**/*.xml" />
+                
+            <mapper type="regexp" from="^(.*)/(.*\.xml)$$" to="\1/\2"/>
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <classpath location="saxon/saxon9he.jar"/>
+        </xslt>
+    </target>
+</project>
