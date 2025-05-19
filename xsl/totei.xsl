@@ -158,6 +158,9 @@
     
     <xsl:template match="SIGNATURE">
         <ab type="signatur" xml:id="{@parid}">
+            <xsl:if test="./@parid">
+                <xsl:attribute name="xml:id"><xsl:value-of select="./@parid"/></xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates/>
         </ab>
     </xsl:template>
@@ -243,6 +246,38 @@
     
     <xsl:template match="L">
         <l><xsl:apply-templates/></l>
+    </xsl:template>
+    
+    <xsl:template match="P//LABEL">
+        <seg type="label">
+            <xsl:if test="./@rend">
+                <xsl:attribute name="rend"><xsl:value-of select="./@rend"/></xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </seg>
+    </xsl:template>
+    <xsl:template match="P//FIELD">
+        <seg type="label">
+            <xsl:if test="./@rend">
+                <xsl:attribute name="rend"><xsl:value-of select="./@rend"/></xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </seg>
+    </xsl:template>
+    
+    <xsl:template match="LABEL">
+        <ab type="label">
+            <xsl:if test="./@rend">
+                <xsl:attribute name="rend"><xsl:value-of select="./@rend"/></xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </ab>
+    </xsl:template>
+    <xsl:template match="FIELD">
+        <ab type="label">
+            <xsl:if test="./@rend">
+                <xsl:attribute name="rend"><xsl:value-of select="./@rend"/></xsl:attribute>
+            </xsl:if><xsl:apply-templates/></ab>
     </xsl:template>
 
 </xsl:stylesheet>
