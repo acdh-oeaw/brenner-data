@@ -2,3 +2,4 @@ brenner/*/*.xml
 brenner_wtags/*/*.xml
 data/editions/*/*.xml
 saxon/
+/editions

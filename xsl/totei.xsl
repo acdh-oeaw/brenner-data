@@ -11,6 +11,42 @@
         <xsl:variable name="volume" select="tokenize($fname, '-')[2]"/>
         <xsl:variable name="issue" select="tokenize($fname, '-')[3]"/>
         <xsl:variable name="page" select="tokenize($fname, '_')[2]"/>
+        
+        <xsl:variable name="year">
+            <xsl:choose>
+                <xsl:when test=".//PUBL_YEAR">
+                    <xsl:value-of select=".//PUBL_YEAR"/>
+                </xsl:when>
+                <xsl:otherwise>2000</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="month">
+            <xsl:choose>
+                <xsl:when test=".//PUBL_MONTH">
+                    <xsl:value-of select=".//PUBL_MONTH"/>
+                </xsl:when>
+                <xsl:otherwise>1</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="day">
+            <xsl:choose>
+                <xsl:when test=".//PUBL_DAY">
+                    <xsl:try select="format-number(.//PUBL_DAY[1]/text(), '00')">
+                        <xsl:catch select="'01'"></xsl:catch>
+                    </xsl:try>
+                    
+                        
+                </xsl:when>
+                <xsl:otherwise>01</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="writtenDate">
+            <xsl:value-of select="string-join(.//PUBL_DATE//text(), ' ')"/>
+        </xsl:variable>
+        
+        <xsl:variable name="pubDate">
+                <xsl:value-of select="format-number($year, '0000')"/>-<xsl:value-of select="format-number($month, '00')"/>-<xsl:value-of select="$day"/>
+        </xsl:variable>
         <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="{$fname}">
             <xsl:if test=".//PREV">
                 <xsl:attribute name="prev">
@@ -58,6 +94,7 @@
                                     </biblScope>
                                     <pubPlace ref="https://sws.geonames.org/2775216/">Innsbruck</pubPlace>
                                     <publisher ref="https://d-nb.info/gnd/118532871">Ficker, Ludwig von</publisher>
+                                    <date when-iso="{$pubDate}"><xsl:value-of select="$writtenDate"/></date>
                                 </imprint>
                             </monogr>
                         </biblStruct>
