@@ -327,5 +327,9 @@
             </ab>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="PAGE/AUCTOR">
+        <ab type="orphaned_author"><rs type="person" ref="{'#'||@globID}"><xsl:apply-templates/></rs></ab>
+    </xsl:template>
 
 </xsl:stylesheet>
