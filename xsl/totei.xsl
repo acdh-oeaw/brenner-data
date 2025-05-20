@@ -319,5 +319,13 @@
                 <xsl:attribute name="rend"><xsl:value-of select="./@rend"/></xsl:attribute>
             </xsl:if><xsl:apply-templates/></ab>
     </xsl:template>
+    
+    <xsl:template match="PAGE/text()">
+        <xsl:if test="normalize-space(.)">
+            <ab type="catchall">
+                <xsl:value-of select="normalize-space(.)"/>
+            </ab>
+        </xsl:if>
+    </xsl:template>
 
 </xsl:stylesheet>

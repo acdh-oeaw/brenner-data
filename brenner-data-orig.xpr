@@ -10,7 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>brenner/BR-02/BR-02-02-13_v0001.xml</String>
+                                    <String>brenner/BR-02/BR-02-02-16_p0004.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -35,6 +35,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>totei_BR-02</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>brenner/BR-02/BR-02-02-13_v0001.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>totei - open</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
