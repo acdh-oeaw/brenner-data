@@ -194,7 +194,7 @@
     </xsl:template>
     
     <xsl:template match="SIGNATURE">
-        <ab type="signatur" xml:id="{@parid}">
+        <ab type="signatur">
             <xsl:if test="./@parid">
                 <xsl:attribute name="xml:id"><xsl:value-of select="./@parid"/></xsl:attribute>
             </xsl:if>
@@ -251,6 +251,9 @@
     
     <xsl:template match="B">
         <hi rend="strong"><xsl:apply-templates/></hi>
+    </xsl:template>
+    <xsl:template match="AQ">
+        <hi rend="text-spaced"><xsl:apply-templates/></hi>
     </xsl:template>
     
     <xsl:template match="TITLE">
