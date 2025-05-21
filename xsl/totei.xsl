@@ -30,12 +30,10 @@
         </xsl:variable>
         <xsl:variable name="day">
             <xsl:choose>
-                <xsl:when test=".//PUBL_DAY">
+                <xsl:when test=".//PUBL_DAY/text()">
                     <xsl:try select="format-number(.//PUBL_DAY[1]/text(), '00')">
                         <xsl:catch select="'01'"></xsl:catch>
                     </xsl:try>
-                    
-                        
                 </xsl:when>
                 <xsl:otherwise>01</xsl:otherwise>
             </xsl:choose>
