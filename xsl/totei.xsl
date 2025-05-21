@@ -64,11 +64,42 @@
                             <xsl:value-of select=".//DISP/@expl"/>
                         </title>
                         <title level="j">Der Brenner</title>
+                        <respStmt>
+                            <resp>Senior Encoder and Editor of the original <title ref="#brenner-online">Der Brenner Online</title></resp>
+                            <persName>Birgit Feierl</persName>
+                            <persName>Heinrich Kabas</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Encoders of the original <title ref="#brenner-online">Der Brenner Online</title></resp>
+                            <persName>Beatrice Alber</persName>
+                            <persName>Marga Achberger</persName>
+                            <persName>Sigfrid Faerber</persName>
+                            <persName>Beate Stueger</persName>
+                            <persName>Erika Wieder</persName>
+                        </respStmt>
+                        <respStmt>
+                            <resp>Conversion of the original XML files of <title ref="#brenner-online">Der Brenner Online</title> into TEI/XML</resp>
+                            <persName ref="https://d-nb.info/gnd/1043833846">Peter Andorfer</persName>
+                        </respStmt>
                     </titleStmt>
                     <publicationStmt>
-                        <p>Publication Information</p>
+                        <publisher>
+                            <orgName ref="https://d-nb.info/gnd/1226158307">Austrian Centre for Digital Humanities and Cultural Heritage</orgName>
+                        </publisher>
+                        <availability>
+                            <licence target="https://creativecommons.org/licenses/by/4.0/deed.de"/>
+                        </availability>
                     </publicationStmt>
                     <sourceDesc>
+                        <bibl xml:id="brenner-online">
+                            <title level="m">DER BRENNER ONLINE Online Version: »Der Brenner. Herausgeber: Ludwig Ficker, Innsbruck 1910-1954«</title>
+                            <editor>Hanno Biber</editor>
+                            <editor>Evelyn Breiteneder</editor>
+                            <editor>Heinrich Kabas</editor>
+                            <editor>Karlheinz Mörth</editor>
+                            <publisher></publisher>
+                            <ref target="https://brenner.oeaw.ac.at/">https://brenner.oeaw.ac.at/</ref>
+                        </bibl>
                         <biblStruct type="journal">
                             <analytic>
                                 <title>Der Brenner, <xsl:value-of select=".//DISP/@expl"/></title>
