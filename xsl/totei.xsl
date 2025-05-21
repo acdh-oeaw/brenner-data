@@ -333,5 +333,15 @@
     <xsl:template match="SPC">
         <hi rend="text-spaced"><xsl:apply-templates/></hi>
     </xsl:template>
+    
+    <xsl:template match="SEPARATOR">
+        <milestone>
+            <xsl:choose>
+                <xsl:when test="./@type">
+                    <xsl:attribute name="unit"><xsl:value-of select="./@type"/></xsl:attribute>
+                </xsl:when>
+            </xsl:choose>
+        </milestone>
+    </xsl:template>
 
 </xsl:stylesheet>
