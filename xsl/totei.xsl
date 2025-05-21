@@ -329,5 +329,9 @@
     <xsl:template match="PAGE/AUCTOR">
         <ab type="orphaned_author"><rs type="person" ref="{'#'||@globID}"><xsl:apply-templates/></rs></ab>
     </xsl:template>
+    
+    <xsl:template match="SPC">
+        <hi rend="text-spaced"><xsl:apply-templates/></hi>
+    </xsl:template>
 
 </xsl:stylesheet>
