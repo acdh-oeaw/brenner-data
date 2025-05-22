@@ -5,7 +5,7 @@
     xmlns="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs"
     version="3.0">
-    <xsl:output method="xml" indent="yes"/>
+    <xsl:output method="xml" indent="yes" suppress-indentation="div"/>
     <xsl:template match="/">
         <xsl:variable name="fname" select=".//FNAME"/>
         <xsl:variable name="volume" select="tokenize($fname, '-')[2]"/>
@@ -239,10 +239,7 @@
         <rs type="person" ref="{'#'||@globID}"><xsl:apply-templates/></rs>
     </xsl:template>
     
-    <xsl:template match="w">
-        <w><xsl:apply-templates/></w>
-    </xsl:template>
-    
+   
     <xsl:template match="NAV_HEADER"/>
     
     <xsl:template match="P">
@@ -278,11 +275,24 @@
         <hi rend="italics"><xsl:apply-templates/></hi>
     </xsl:template>
     
+    <xsl:template match="IN">
+        <hi rend="initial"><xsl:apply-templates/></hi>
+    </xsl:template>
+    
     <xsl:template match="B">
         <hi rend="strong"><xsl:apply-templates/></hi>
     </xsl:template>
+    
     <xsl:template match="AQ">
         <hi rend="text-spaced"><xsl:apply-templates/></hi>
+    </xsl:template>
+    
+    <xsl:template match="SYMBOL[@type]">
+        <milestone unit="{@type}"/>
+    </xsl:template>
+    
+    <xsl:template match="DATE">
+        <date><xsl:apply-templates/></date>
     </xsl:template>
     
     <xsl:template match="TITLE">
@@ -373,6 +383,10 @@
                 </xsl:when>
             </xsl:choose>
         </milestone>
+    </xsl:template>
+    
+    <xsl:template match="w">
+        <w xml:id="{'w-'||./@wid}" pos="{./@pos}" lemma="{./@lem}"><xsl:apply-templates/></w>
     </xsl:template>
 
 </xsl:stylesheet>

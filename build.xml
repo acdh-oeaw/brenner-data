@@ -5,109 +5,109 @@
     <mkdir dir="./data/editions"/>
 
     <mkdir dir="./data/editions/BR-01"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-01" destdir="./data/editions/BR-01" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-01" destdir="./data/editions/BR-01" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-02"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-02" destdir="./data/editions/BR-02" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-02" destdir="./data/editions/BR-02" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-03"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-03" destdir="./data/editions/BR-03" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-03" destdir="./data/editions/BR-03" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-04"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-04" destdir="./data/editions/BR-04" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-04" destdir="./data/editions/BR-04" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-05"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-05" destdir="./data/editions/BR-05" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-05" destdir="./data/editions/BR-05" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-06"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-06" destdir="./data/editions/BR-06" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-06" destdir="./data/editions/BR-06" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-07"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-07" destdir="./data/editions/BR-07" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-07" destdir="./data/editions/BR-07" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-08"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-08" destdir="./data/editions/BR-08" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-08" destdir="./data/editions/BR-08" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-09"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-09" destdir="./data/editions/BR-09" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-09" destdir="./data/editions/BR-09" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-10"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-10" destdir="./data/editions/BR-10" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-10" destdir="./data/editions/BR-10" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-11"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-11" destdir="./data/editions/BR-11" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-11" destdir="./data/editions/BR-11" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-12"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-12" destdir="./data/editions/BR-12" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-12" destdir="./data/editions/BR-12" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-13"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-13" destdir="./data/editions/BR-13" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-13" destdir="./data/editions/BR-13" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-14"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-14" destdir="./data/editions/BR-14" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-14" destdir="./data/editions/BR-14" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-15"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-15" destdir="./data/editions/BR-15" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-15" destdir="./data/editions/BR-15" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-16"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-16" destdir="./data/editions/BR-16" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-16" destdir="./data/editions/BR-16" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-17"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-17" destdir="./data/editions/BR-17" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-17" destdir="./data/editions/BR-17" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
 
     <mkdir dir="./data/editions/BR-18"/>
-    <xslt style="./xsl/totei.xsl"  basedir="./brenner/BR-18" destdir="./data/editions/BR-18" includes="*.xml" extension=".xml">
+    <xslt style="./xsl/totei.xsl"  basedir="./brenner_wtags/BR-18" destdir="./data/editions/BR-18" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon-he-12.7.jar"/>
     </xslt>
