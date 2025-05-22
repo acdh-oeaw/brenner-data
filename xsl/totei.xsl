@@ -9,7 +9,8 @@
     <xsl:template match="/">
         <xsl:variable name="fname" select=".//FNAME"/>
         <xsl:variable name="volume" select="tokenize($fname, '-')[2]"/>
-        <xsl:variable name="issue" select="tokenize($fname, '-')[3]"/>
+        <xsl:variable name="halbband" select="tokenize($fname, '-')[3]"/>
+        <xsl:variable name="issue" select="tokenize(tokenize($fname, '-')[4], '_')[1]"/>
         <xsl:variable name="page" select="tokenize($fname, '_')[2]"/>
         
         <xsl:variable name="year">
@@ -110,12 +111,18 @@
                                     <biblScope unit="volume" n="{$volume}">
                                         <xsl:value-of select=".//DISP/@volume"/>
                                     </biblScope>
+                                    <biblScope unit="halbband" n="{$halbband}">
+                                        <xsl:choose>
+                                            <xsl:when test=".//DISP/@half">
+                                                <xsl:value-of select=".//DISP/@half"/>
+                                            </xsl:when>
+                                        </xsl:choose>
+                                    </biblScope>
                                     <biblScope unit="issue" n="{$issue}">
                                         <xsl:choose>
                                             <xsl:when test=".//DISP/@issue">
                                                 <xsl:value-of select=".//DISP/@issue"/>
                                             </xsl:when>
-                                            <xsl:otherwise>[1]</xsl:otherwise>
                                         </xsl:choose>
                                     </biblScope>
                                     <biblScope unit="page" n="{$page}">
