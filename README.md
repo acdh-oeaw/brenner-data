@@ -1,6 +1,6 @@
 # Brenner Data
 
-Repo to convert original Brenner-XML files into some valid TEI/XML and pubish the latter.
+Repo to convert original Brenner-XML files into some valid TEI/XML and publish the latter.
 
 * copy needed files from [br_texts/BR](https://gitlab.oeaw.ac.at/acdh-ch/ace/der-brenner/brenner) into `brenner`
 * run `ant` to convert files from `brenner` into TEI/XML and store new created files into `editions/{volume-id}/{orig-filename}.xml`
