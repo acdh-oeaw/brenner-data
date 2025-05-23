@@ -92,48 +92,110 @@
                         </availability>
                     </publicationStmt>
                     <sourceDesc>
-                        <bibl xml:id="brenner-online">
-                            <title level="m">DER BRENNER ONLINE Online Version: »Der Brenner. Herausgeber: Ludwig Ficker, Innsbruck 1910-1954«</title>
-                            <editor>Hanno Biber</editor>
-                            <editor>Evelyn Breiteneder</editor>
-                            <editor>Heinrich Kabas</editor>
-                            <editor>Karlheinz Mörth</editor>
-                            <publisher></publisher>
-                            <ref target="https://brenner.oeaw.ac.at/">https://brenner.oeaw.ac.at/</ref>
-                        </bibl>
-                        <biblStruct type="journal">
-                            <analytic>
-                                <title>Der Brenner, <xsl:value-of select=".//DISP/@expl"/></title>
-                            </analytic>
-                            <monogr>
-                                <title level="j" ref="https://d-nb.info/gnd/4149123-3">Der Brenner</title>
-                                <imprint>
-                                    <biblScope unit="volume" n="{$volume}">
-                                        <xsl:value-of select=".//DISP/@volume"/>
-                                    </biblScope>
-                                    <biblScope unit="halbband" n="{$halbband}">
-                                        <xsl:choose>
-                                            <xsl:when test=".//DISP/@half">
-                                                <xsl:value-of select=".//DISP/@half"/>
-                                            </xsl:when>
-                                        </xsl:choose>
-                                    </biblScope>
-                                    <biblScope unit="issue" n="{$issue}">
-                                        <xsl:choose>
-                                            <xsl:when test=".//DISP/@issue">
-                                                <xsl:value-of select=".//DISP/@issue"/>
-                                            </xsl:when>
-                                        </xsl:choose>
-                                    </biblScope>
-                                    <biblScope unit="page" n="{$page}">
-                                        <xsl:value-of select=".//DISP/@page"/>
-                                    </biblScope>
-                                    <pubPlace ref="https://sws.geonames.org/2775216/">Innsbruck</pubPlace>
-                                    <publisher ref="https://d-nb.info/gnd/118532871">Ficker, Ludwig von</publisher>
-                                    <date when-iso="{$pubDate}"><xsl:value-of select="$writtenDate"/></date>
-                                </imprint>
-                            </monogr>
-                        </biblStruct>
+                        <listBibl n="source pulications">
+                            <bibl xml:id="brenner-online">
+                                <title level="m">DER BRENNER ONLINE Online Version: »Der Brenner. Herausgeber: Ludwig Ficker, Innsbruck 1910-1954«</title>
+                                <editor>Hanno Biber</editor>
+                                <editor>Evelyn Breiteneder</editor>
+                                <editor>Heinrich Kabas</editor>
+                                <editor>Karlheinz Mörth</editor>
+                                <publisher></publisher>
+                                <ref target="https://brenner.oeaw.ac.at/">https://brenner.oeaw.ac.at/</ref>
+                            </bibl>
+                            <biblStruct type="journal">
+                                <analytic>
+                                    <title>Der Brenner, <xsl:value-of select=".//DISP/@expl"/></title>
+                                </analytic>
+                                <monogr>
+                                    <title level="j" ref="https://d-nb.info/gnd/4149123-3">Der Brenner</title>
+                                    <imprint>
+                                        <biblScope unit="volume" n="{$volume}">
+                                            <xsl:value-of select=".//DISP/@volume"/>
+                                        </biblScope>
+                                        <biblScope unit="halbband" n="{$halbband}">
+                                            <xsl:choose>
+                                                <xsl:when test=".//DISP/@half">
+                                                    <xsl:value-of select=".//DISP/@half"/>
+                                                </xsl:when>
+                                            </xsl:choose>
+                                        </biblScope>
+                                        <biblScope unit="issue" n="{$issue}">
+                                            <xsl:choose>
+                                                <xsl:when test=".//DISP/@issue">
+                                                    <xsl:value-of select=".//DISP/@issue"/>
+                                                </xsl:when>
+                                            </xsl:choose>
+                                        </biblScope>
+                                        <biblScope unit="page" n="{$page}">
+                                            <xsl:value-of select=".//DISP/@page"/>
+                                        </biblScope>
+                                        <pubPlace ref="https://sws.geonames.org/2775216/">Innsbruck</pubPlace>
+                                        <publisher ref="https://d-nb.info/gnd/118532871">Ficker, Ludwig von</publisher>
+                                        <date when-iso="{$pubDate}"><xsl:value-of select="$writtenDate"/></date>
+                                    </imprint>
+                                </monogr>
+                            </biblStruct>
+                            <xsl:for-each select=".//TEXT_START">
+                                <bibl n="current text">
+                                    <author><xsl:value-of select="./@author"/></author>
+                                    <title n="{@shortDisp}"><xsl:value-of select="./@title"/></title>
+                                    <biblScope unit="page"><xsl:value-of select="./@startPage"/>-<xsl:value-of select="./@endPage"/></biblScope>
+                                    <idno><xsl:value-of select="./@href"/></idno>
+                                </bibl>
+                            </xsl:for-each>
+                        </listBibl>
+                        <xsl:if test=".//PREV_ISSUE or .//NEXT_ISSUE">
+                            <listBibl n="Context of the current page and text">
+                                <xsl:if test=".//PREV_ISSUE">
+                                    <bibl n="previous issue">
+                                        <title>
+                                            <xsl:value-of select=".//PREV_ISSUE/@disp"/>
+                                        </title>
+                                        <idno><xsl:value-of select=".//PREV_ISSUE/@href"/></idno>
+                                    </bibl>
+                                </xsl:if>
+                                <xsl:if test=".//PREV_VOLUME/@href">
+                                    <bibl n="previous volume">
+                                        <title>
+                                            <xsl:value-of select=".//PREV_VOLUME/@disp"/>
+                                        </title>
+                                        <idno><xsl:value-of select=".//PREV_VOLUME/@href"/></idno>
+                                    </bibl>
+                                </xsl:if>
+                                <xsl:if test=".//NEXT_ISSUE/@href">
+                                    <bibl n="next issue">
+                                        <title>
+                                            <xsl:value-of select=".//NEXT_ISSUE/@disp"/>
+                                        </title>
+                                        <idno><xsl:value-of select=".//NEXT_ISSUE/@href"/></idno>
+                                    </bibl>
+                                </xsl:if>
+                                <xsl:if test=".//NEXT_VOLUME/@href">
+                                    <bibl n="next volume">
+                                        <title>
+                                            <xsl:value-of select=".//NEXT_VOLUME/@disp"/>
+                                        </title>
+                                        <idno><xsl:value-of select=".//NEXT_VOLUME/@href"/></idno>
+                                    </bibl>
+                                </xsl:if>
+                                <xsl:for-each select=".//PREV_START/@href">
+                                    <bibl n="previous text">
+                                        <author><xsl:value-of select="./@author"/></author>
+                                        <title n="{@shortDisp}"><xsl:value-of select="./@title"/></title>
+                                        <biblScope unit="page"><xsl:value-of select="./@startPage"/>-<xsl:value-of select="./@endPage"/></biblScope>
+                                        <idno><xsl:value-of select="./@href"/></idno>
+                                    </bibl>
+                                </xsl:for-each>
+                                <xsl:for-each select=".//NEXT_START">
+                                    <bibl n="next text">
+                                        <author><xsl:value-of select="./@author"/></author>
+                                        <title n="{@shortDisp}"><xsl:value-of select="./@title"/></title>
+                                        <biblScope unit="page"><xsl:value-of select="./@startPage"/>-<xsl:value-of select="./@endPage"/></biblScope>
+                                        <idno><xsl:value-of select="./@href"/></idno>
+                                    </bibl>
+                                </xsl:for-each>
+                            </listBibl>
+                        </xsl:if>
                     </sourceDesc>
                 </fileDesc>
             </teiHeader>
@@ -255,6 +317,9 @@
                 <xsl:attribute name="xml:id">
                     <xsl:value-of select="./@parid"/>
                 </xsl:attribute>
+            </xsl:if>
+            <xsl:if test=".[@part='final']">
+                <xsl:attribute name="rend" select="'no-intend'"/>
             </xsl:if>
             <xsl:apply-templates/>
         </p>

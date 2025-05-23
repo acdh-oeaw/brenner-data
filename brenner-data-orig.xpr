@@ -10,6 +10,66 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>brenner/BR-04/BR-04-02-19_n0863.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>totei - open</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>brenner/</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>totei</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>brenner/BR-04/BR-04-02-19_n0864.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>totei - open</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>brenner_wtags/BR-02/BR-02-01-01_n0004.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -95,26 +155,6 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>totei - open</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>brenner/</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>totei</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
